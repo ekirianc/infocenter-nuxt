@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    h2{
+        @apply text-2xl font-bold
+    }
+}
+
+@layer components{
+    .tabs-menu{
+        @apply w-full pb-1 pt-2 grid hover:text-primary text-center
+    }
+}
+
+@layer utilities{
+
+    .tabs-menu.router-link-exact-active{
+        @apply font-bold text-primary/80
+    }
+    .tabs-menu.router-link-exact-active span.ic{
+        @apply bg-primary/20 rounded-full w-[calc(100%-20%)] ml-[10%]
+    }
+
+    /*hide solid icon by default*/
+    .tabs-menu span svg:last-child{
+        @apply hidden
+    }
+    /*when active, show solid icon*/
+    .tabs-menu.router-link-exact-active span svg:last-child{
+        @apply inline-block text-gray-700
+    }
+    /*when active, hide main icon*/
+    .tabs-menu.router-link-exact-active span svg:first-child{
+        @apply hidden
+    }
+
+}

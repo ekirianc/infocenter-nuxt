@@ -1,0 +1,11 @@
+{
+  "appId": "com.hmte.app",
+  "appName": "HMTE Datacenter",
+  "bundledWebRuntime": false,
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  }
+}
