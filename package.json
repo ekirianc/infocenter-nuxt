@@ -16,6 +16,7 @@
     "@capacitor/android": "^4.6.1",
     "@capacitor/cli": "^4.6.1",
     "@capacitor/core": "^4.6.1",
+    "@webzlodimir/vue-bottom-sheet": "^2.0.2",
     "lodash": "^4.17.21",
     "nuxt-icon": "^0.2.5",
     "nuxt-swiper": "^0.1.9"

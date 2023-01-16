@@ -1,6 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     ssr: false,
+    plugins: [
+        '~/plugins/VueBottomSheet.js'
+    ],
     modules: [
         '@nuxtjs/tailwindcss',
         '@nuxtjs/color-mode',
@@ -31,7 +34,6 @@ export default defineNuxtConfig({
         classSuffix: '',
     },
     // css:[
-    //     "swiper/css",
-    //     "swiper/css/pagination"
+    //     "@webzlodimir/vue-bottom-sheet/dist/style.cssswiper/css",
     // ]
 })
