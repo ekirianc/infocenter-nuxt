@@ -6,8 +6,8 @@
             </button>
 
             <button @click="toggleView" class="pill">
-                <span v-if="!viewMode"> <Icon name="Grid" class="text-lg -mt-1"/> Card</span>
-                <span  v-if="viewMode"> <Icon  name="Document" class="text-lg -mt-1"/> List</span>
+                <span v-if="!viewMode"> <Icon name="material-symbols:arrow-drop-down-rounded" class="text-lg -mt-1"/> Card</span>
+                <span  v-if="viewMode"> <Icon  name="material-symbols:arrow-drop-down-rounded" class="text-lg -mt-1"/> List</span>
             </button>
 
             <button class="pill">
