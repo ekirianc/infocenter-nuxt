@@ -1,7 +1,6 @@
 <template>
 
-    <navbar-top/>
-    <div class="p-4">
+    <div>
         <slot/>
     </div>
     <navbar-bottom/>

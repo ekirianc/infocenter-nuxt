@@ -3,11 +3,17 @@
 @tailwind utilities;
 
 @layer base{
+    body{
+        @apply font-mulish
+    }
+    h1, h2, h3, h4, h5{
+        @apply font-semibold font-outfit
+    }
     h2{
-        @apply text-2xl font-bold
+        @apply text-2xl
     }
     h3{
-        @apply text-xl font-bold
+        @apply text-xl mt-4
     }
 }
 
@@ -15,12 +21,39 @@
     .tabs-menu{
         @apply w-full pb-1 pt-2 grid hover:text-primary text-center
     }
+    .login-label{
+        @apply absolute left-4 text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10
+        origin-[0] bg-white px-2 rounded-full
+        dark:text-gray-400
+        dark:bg-gray-700
+        peer-focus:dark:bg-gray-200
+        peer-focus:dark:text-gray-800
+        peer-focus:rounded-full
+        peer-focus:text-blue-600
+        peer-placeholder-shown:scale-100
+        peer-placeholder-shown:-translate-y-1/2
+        peer-placeholder-shown:top-1/2
+        peer-placeholder-shown:dark:bg-transparent
+        peer-focus:top-2
+        peer-focus:scale-75
+        peer-focus:-translate-y-4
+    }
+    .card{
+        @apply px-6 py-5 shadow-card-2 rounded-2xl bg-white
+    }
+    .pill{
+        @apply bg-white border py-1 px-5 rounded-full text-sm
+    }
+
+    .bottom-sheet ul{
+        @apply text-sm font-bold text-gray-700 divide-y-2
+    }
 }
 
 @layer utilities{
 
     .tabs-menu.router-link-exact-active{
-        @apply font-bold text-primary/80
+        @apply font-bold
     }
     .tabs-menu.router-link-exact-active span.ic{
         @apply bg-primary/20 rounded-full w-[calc(100%-20%)] ml-[10%]
@@ -41,6 +74,13 @@
 
     .shadow-card{
         box-shadow: 0 0 6px rgba(90, 143, 220, 0.1), 0 2px 4px rgba(18, 54, 105, 0.04);
+    }
+    .shadow-card-2{
+        box-shadow: 0 0 6px rgba(90, 143, 220, 0.1), 0 2px 4px rgba(18, 54, 105, 0.04);
+    }
+
+    .bottom-sheet ul li.active{
+        @apply bg-primary/20 font-bold text-sky-800
     }
 
 }

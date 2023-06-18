@@ -2,7 +2,7 @@
 <template>
     <!-- Bottom Nav -->
     <div class="w-full h-20 absolute ">
-        <section id="bottom-navigation" class="border-t fixed inset-x-0 bottom-0 z-10 bg-white border-t">
+        <section id="bottom-navigation" class="border-t fixed inset-x-0 bottom-0 bg-white border-t z-10 py-2">
             <div id="tabs" class="flex justify-between" >
                 <template v-for="nav in navs">
                     <nuxt-link :to="nav.route" class="tabs-menu">

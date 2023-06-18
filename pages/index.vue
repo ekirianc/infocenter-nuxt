@@ -1,8 +1,8 @@
 
 <template>
-    <div>
-        <h2>Home</h2>
-
+    <div class="p-4">
+        <navbar-top/>
+        <h2 class="font-Mulish">Home</h2>
         <!--Notification card-->
         <template v-if="messagesNotif.length !== 0">
             <home-pesan-baru v-for="notif in messagesNotif" :matkul="notif.matkul"/>
@@ -16,13 +16,21 @@
         <!--Jadwal Kuliah Section-->
         <section class="mt-4 flex flex-col gap-3 mb-8">
             <header class="flex justify-between">
-                <h3>Kuliah Hari Ini</h3>
+                <h3 class="m-0">Kuliah Hari Ini</h3>
                 <button @click="open" class="bg-white border py-1 px-5 rounded-full text-sm">
                     Semester 4 <Icon name="material-symbols:arrow-drop-down-rounded" class="text-xl -mt-1"/>
                 </button>
+                <bottom-sheet ref="semesterSelect" title="Pilih Semester">
+                    <ul>
+                        <li class="active">Semester 2</li>
+                        <li>Semester 4</li>
+                        <li>Semester 6</li>
+                        <li>Semester 6</li>
+                    </ul>
+                </bottom-sheet>
             </header>
             <!--Jadwal Card-->
-            <a href="#" class="flex justify-between px-4 py-5 shadow-card rounded-2xl bg-white">
+            <a href="#" class="card flex justify-between">
                 <div>
                     <span class="font-medium truncate font-outfit text-xl">Sistem Instrumentasi</span>
                     <div class="flex gap-2 mt-2">
@@ -30,12 +38,12 @@
                         <span class="border bg-stone-200/70 px-3 font-semibold text-sm rounded-md">09:20 - 11:00</span>
                     </div>
                 </div>
-                <div class="grid content-center">
-                    <span class="ic-message-notif text-primary text-xl mx-3 "></span>
+                <div class="grid content-center pr-2 text-primary">
+                    <Icon name="MessageNotif" class="text-2xl"/>
                 </div>
             </a>
             <!--Jadwal Card-->
-            <a href="#" class="flex justify-between px-4 py-5 shadow-card rounded-2xl bg-white">
+            <a href="#" class="card flex justify-between">
                 <div>
                     <span class="font-medium truncate font-outfit text-xl">Sistem Instrumentasi</span>
                     <div class="flex gap-2 mt-2">
@@ -43,35 +51,26 @@
                         <span class="border bg-stone-200/70 px-3 font-semibold text-sm rounded-md">09:20 - 11:00</span>
                     </div>
                 </div>
-                <div class="grid content-center">
-                    <span class="ic-more text-gray-700 text-xl mx-3 "></span>
+                <div class="grid content-center text-gray-700 text-2xl pr-2 ">
+                    <Icon name="fluent:more-vertical-16-regular"></Icon>
                 </div>
             </a>
         </section> <!--Jadwal Kuliah-->
 
-    </div>
 
-    <!--Bottom Sheet (dropdown mobile) [jadwal section -> pilih semester]-->
-    <!-- https://github.com/vaban-ru/vue-bottom-sheet -->
-    <vue-bottom-sheet ref="semesterPick">
-        <ul class="last:mb-10">
-            <li class="p-4 border-b active:bg-gray-100 transition"><a href="#">Semester 2</a></li>
-            <li class="p-4 border-b active:bg-gray-100 transition"><a href="#">Semester 4</a></li>
-            <li class="p-4 border-b active:bg-gray-100 transition"><a href="#">Semester 6</a></li>
-        </ul>
-        <p class="text-center text-gray-400 p-8">semester genap 2023</p>
-    </vue-bottom-sheet>
+
+    </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 
-// bottom sheet
-const semesterPick = ref(null)
-const open = () => { semesterPick.value!.open() }
-const close = () => { semesterPick.value!.close() }
+const semesterSelect = ref(null)
+const open = ()=>{ semesterSelect.value.open() }
 
 const messagesNotif = ref([
-    { matkul: 'Pengolahan CItra Digital' },
+    { matkul: 'Pengolahan Citra Digital', read: false },
+    { matkul: 'Pemrograman Mobile', read: false },
+    { matkul: 'Pemrograman Mobile', read: false },
 ])
 </script>
 

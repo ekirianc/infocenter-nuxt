@@ -7,6 +7,13 @@ module.exports = {
         'primary': '#1169e9',
       },
     },
+    fontFamily: {
+      'mulish': ['Mulish'],
+      'outfit': ['Outfit']
+    }
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar-hide'),
+    require('@tailwindcss/line-clamp'),
+  ],
 }
