@@ -524,6 +524,11 @@
   resolved "https://registry.npmjs.org/@esbuild/win32-x64/-/win32-x64-0.16.17.tgz"
   integrity sha512-y+EHuSchhL7FjHgvQL/0fnnFmO4T1bhvWANX6gcnqTjtnKWbTvUMCpGnv2+t+31d7RzyEAYAd4u2fnIhHL6N/Q==
 
+"@fastify/busboy@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@fastify/busboy/-/busboy-2.0.0.tgz#f22824caff3ae506b18207bad4126dbc6ccdb6b8"
+  integrity sha512-JUFJad5lv7jxj926GPgymrWQxxjPYuJNiNjNMzqT+HiuP6Vl3dk5xzG+8sTX96np0ZAluvaMzPsjhHZ5rNuNQQ==
+
 "@iconify/types@^2.0.0":
   version "2.0.0"
   resolved "https://registry.npmjs.org/@iconify/types/-/types-2.0.0.tgz"
@@ -1614,13 +1619,6 @@ builtin-modules@^3.3.0:
   version "3.3.0"
   resolved "https://registry.npmjs.org/builtin-modules/-/builtin-modules-3.3.0.tgz"
   integrity sha512-zhaCDicdLuWN5UbN5IMnFqNMhNfo919sH85y2/ea+5Yg9TsTkeZxpL+JLbp6cgYFS4sRLp3YV4S6yDuqVWHYOw==
-
-busboy@^1.6.0:
-  version "1.6.0"
-  resolved "https://registry.npmjs.org/busboy/-/busboy-1.6.0.tgz"
-  integrity sha512-8SFQbg/0hQ9xy3UNTB0YEnsNBbWfhf7RtnzpL7TkBiTBRfrQ9Fxcnz7VJsleJpyp6rVLvXiuORqjlHi5q+PYuA==
-  dependencies:
-    streamsearch "^1.1.0"
 
 c12@^0.2.13:
   version "0.2.13"
@@ -5285,11 +5283,6 @@ std-env@^3.3.1:
   resolved "https://registry.npmjs.org/std-env/-/std-env-3.3.1.tgz"
   integrity sha512-3H20QlwQsSm2OvAxWIYhs+j01MzzqwMwGiiO1NQaJYZgJZFPuAbf95/DiKRBSTYIJ2FeGUc+B/6mPGcWP9dO3Q==
 
-streamsearch@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.npmjs.org/streamsearch/-/streamsearch-1.1.0.tgz"
-  integrity sha512-Mcc5wHehp9aXz1ax6bZUyY5afg9u2rv5cqQI3mRrYkGC8rW2hM02jWuwjtL++LS5qinSyhj2QfLyNsuc+VsExg==
-
 "string-width@^1.0.2 || 2 || 3 || 4", string-width@^4.1.0, string-width@^4.2.0, string-width@^4.2.3:
   version "4.2.3"
   resolved "https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz"
@@ -5620,11 +5613,11 @@ unctx@^2.1.0:
     unplugin "^1.0.0"
 
 undici@^5.12.0:
-  version "5.22.1"
-  resolved "https://registry.npmjs.org/undici/-/undici-5.22.1.tgz"
-  integrity sha512-Ji2IJhFXZY0x/0tVBXeQwgPlLWw13GVzpsWPQ3rV50IFMMof2I55PZZxtm4P6iNq+L5znYN9nSTAq0ZyE6lSJw==
+  version "5.27.2"
+  resolved "https://registry.yarnpkg.com/undici/-/undici-5.27.2.tgz#a270c563aea5b46cc0df2550523638c95c5d4411"
+  integrity sha512-iS857PdOEy/y3wlM3yRp+6SNQQ6xU0mmZcwRSriqk+et/cwWAtwmIGf6WkoDN2EK/AMdCO/dfXzIwi+rFMrjjQ==
   dependencies:
-    busboy "^1.6.0"
+    "@fastify/busboy" "^2.0.0"
 
 unenv@^1.0.0:
   version "1.0.1"
